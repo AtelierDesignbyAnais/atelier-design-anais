@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier Design Anaïs - Design Global & Émotions Digitales</title>
+    <meta name="description" content="Portfolio of Atelier Design Anaïs. Minimalist, typography-driven UX/UI Designer blending digital precision with stationery craftsmanship.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="smooth-wrapper">
+
+        <!-- Navigation -->
+        <nav class="glass-nav">
+            <div class="nav-container">
+                <a href="#" class="logo">
+                    <img src="logoV1.png" alt="Atelier Design Anaïs Logo">
+                </a>
+                
+                <!-- Desktop Links -->
+                <div class="nav-links desktop-only">
+                    <a href="#approach" data-i18n="nav_approach">L'Approche</a>
+                    <a href="#pillars" data-i18n="nav_pillars">Piliers</a>
+                    <a href="#gallery" data-i18n="nav_gallery">Galerie</a>
+                </div>
+                
+                <!-- Desktop Actions -->
+                <div class="nav-actions desktop-only">
+                    <div class="lang-switcher">
+                        <button class="lang-btn active" data-lang="fr">FR</button>
+                        <span class="lang-sep">|</span>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                        <span class="lang-sep">|</span>
+                        <button class="lang-btn" data-lang="es">ES</button>
+                    </div>
+                    <a href="#contact" class="btn-contact" data-i18n="nav_contact">Contact</a>
+                </div>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button class="mobile-toggle mobile-only" aria-label="Toggle Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Full-Screen Overlay -->
+        <div class="mobile-overlay">
+            <div class="mobile-overlay-content">
+                <a href="#approach" class="mobile-link" data-i18n="nav_approach">L'Approche</a>
+                <a href="#pillars" class="mobile-link" data-i18n="nav_pillars">Piliers</a>
+                <a href="#gallery" class="mobile-link" data-i18n="nav_gallery">Galerie</a>
+                <a href="#contact" class="mobile-link" data-i18n="nav_contact">Contact</a>
+                
+                <div class="mobile-lang-switcher lang-switcher">
+                    <button class="lang-btn active" data-lang="fr">FR</button>
+                    <span class="lang-sep">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <span class="lang-sep">|</span>
+                    <button class="lang-btn" data-lang="es">ES</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Section -->
+            <section class="hero section-scroll">
+                <div class="hero-content">
+                    <h1 class="headline" data-i18n="hero_headline">
+                        Design Global <br>& Émotions <br>Digitales.
+                    </h1>
+                </div>
+                <div class="hero-visual">
+                    <div class="organic-blob">
+                        <div class="blob-inner showreel-placeholder">
+                            <img src="logoV1.png" alt="Showreel Logo" class="showreel-logo">
+                            <span class="showreel-text" data-i18n="hero_showreel">Showreel 2026</span>
+                            <span class="showreel-desc">Digital / Print Transitions</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="separator-line"></div>
+
+            <!-- The 3 Pillars (Typography-Driven) -->
+            <section id="pillars" class="pillars section-scroll">
+                <div class="pillars-container">
+                    <h2 class="section-title" data-i18n="pillars_title">Les 3 Piliers.</h2>
+                    <div class="pillars-grid">
+                        
+                        <!-- Pillar 1: Web Design -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front card-bg-1">
+                                    <h3 data-i18n="pillar_1_title">Web Design</h3>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p class="cta-phrase" data-i18n="pillar_1_cta">Une présence digitale à la hauteur de votre talent.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pillar 2: Papeterie Événementielle -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front card-bg-2">
+                                    <h3 data-i18n="pillar_2_title">Papeterie Événementielle</h3>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p class="cta-phrase" data-i18n="pillar_2_cta">Le premier chapitre tactile de votre plus bel événement.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pillar 3: Identité Visuelle -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front card-bg-3">
+                                    <h3 data-i18n="pillar_3_title">Identité Visuelle</h3>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p class="cta-phrase" data-i18n="pillar_3_cta">Une identité visuelle qui raconte votre histoire sans dire un mot.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <div class="separator-line"></div>
+
+            <!-- Dual Approach Section -->
+            <section id="approach" class="dual-approach section-scroll">
+                <div class="approach-split">
+                    
+                    <div class="approach-side digital-side">
+                        <h2 class="side-title" data-i18n="approach_digital_title">Digital</h2>
+                        <h3 class="side-subtitle" data-i18n="approach_digital_subtitle">Stratégie & UI</h3>
+                        <p class="side-desc" data-i18n="approach_digital_desc">De l'architecture de l'information au pixel perfect. Une ergonomie pensée pour l'utilisateur, habillée d'une interface immersive.</p>
+                    </div>
+
+                    <div class="approach-divider"></div>
+
+                    <div class="approach-side paper-side">
+                        <h2 class="side-title" data-i18n="approach_paper_title">Papier</h2>
+                        <h3 class="side-subtitle" data-i18n="approach_paper_subtitle">Élégance Tactile</h3>
+                        <p class="side-desc" data-i18n="approach_paper_desc">Faire-part, Save the Date, Plan de table. La même rigueur et le même amour du détail appliqués à la papeterie événementielle de luxe.</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="separator-line"></div>
+
+            <!-- Immersive Gallery (Masonry Placeholders) -->
+            <section id="gallery" class="immersive-gallery section-scroll">
+                <h2 class="section-title" data-i18n="gallery_title">Galerie Immersive.</h2>
+                <div class="masonry-gallery">
+                    <div class="masonry-item frame-tall"></div>
+                    <div class="masonry-item frame-wide"></div>
+                    <div class="masonry-item frame-square"></div>
+                    <div class="masonry-item frame-large"></div>
+                    <div class="masonry-item frame-tall-2"></div>
+                </div>
+            </section>
+
+            <div class="separator-line"></div>
+
+            <!-- Signature Section -->
+            <section class="signature section-scroll">
+                <p class="signature-text" data-i18n="signature_text">Créations digitales & papeterie fine : l'esthétique au service de vos moments forts.</p>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer id="contact" class="footer section-scroll">
+            <div class="footer-content">
+                <a href="mailto:anais_soria@outlook.com" class="cta-huge" data-i18n="cta_huge">Let's Talk</a>
+                
+                <a href="https://wa.me/33646112902" target="_blank" rel="noopener noreferrer" class="cta-whatsapp touch-target">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="whatsapp-icon"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                    <span data-i18n="cta_whatsapp">Message WhatsApp</span>
+                </a>
+
+                <div class="footer-bottom">
+                    <p>© 2026 Atelier Design Anaïs. <span data-i18n="footer_rights">Tous droits réservés.</span></p>
+                    <div class="social-links">
+                        <a href="#" class="touch-target">LinkedIn</a>
+                        <a href="#" class="touch-target">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
