@@ -442,37 +442,47 @@ h1, h2, h3, .cta-huge, .signature-text {
     margin: 0 auto;
 }
 
-/* Galerie Immersive - Version Automatique */
+/* Galerie Dynamique en Grille */
 .masonry-gallery {
-    column-count: 3;
-    column-gap: 1.5rem; /* Espace entre les colonnes */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    grid-auto-flow: dense; /* Pour que les petits projets bouchent les trous vides */
+    gap: 1.5rem;
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
 }
 
 .masonry-item {
-    break-inside: avoid;
-    margin-bottom: 1.5rem; /* Espace sous chaque projet */
     border: var(--border-thin);
     border-radius: 0.5rem;
     background-color: var(--chocolate-light);
-    transition: transform 0.5s ease;
     overflow: hidden;
-    height: auto !important; /* <--- SUPPRIME LES HAUTEURS FIXES */
+    height: 100%; /* Important pour que tout s'aligne */
 }
 
 .masonry-item img,
 .masonry-item video {
     width: 100%;
-    height: auto !important; /* <--- ADAPTE LA HAUTEUR À L'IMAGE/VIDÉO */
+    height: 100%;
     display: block;
-    object-fit: cover; /* <--- REMPLIT LE CADRE SANS BANDES NOIRES */
+    object-fit: cover; /* Remplit le cadre proprement */
 }
 
-/* On neutralise les anciens cadres pour qu'ils ne forcent plus rien */
-.frame-tall, .frame-wide, .frame-square, .frame-large, .frame-tall-2 {
-    height: auto !important;
+/* LA MAGIE : La classe pour les vidéos ou grands projets */
+.featured-project {
+    grid-column: span 2; /* Prend 2 colonnes sur 3 */
+    grid-row: span 1;    /* Garde une hauteur raisonnable */
+}
+
+/* Adaptation Mobile */
+@media (max-width: 900px) {
+    .masonry-gallery { grid-template-columns: repeat(2, 1fr); }
+    .featured-project { grid-column: span 2; }
+}
+@media (max-width: 600px) {
+    .masonry-gallery { grid-template-columns: 1fr; }
+    .featured-project { grid-column: span 1; }
 }
 
 /* Signature Section */
