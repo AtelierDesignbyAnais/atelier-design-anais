@@ -307,37 +307,14 @@ h1, h2, h3, .cta-huge, .signature-text {
     100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
 }
 
-.blob-inner {
+.showreel-video {
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(5px);
-    gap: 1rem;
-}
-
-.showreel-logo {
-    height: 30px;
-    opacity: 0.8;
-}
-
-.showreel-text {
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--chocolate);
-}
-
-.showreel-desc {
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    opacity: 0.6;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+   border-radius: inherit;
 }
 
 .separator-line {
