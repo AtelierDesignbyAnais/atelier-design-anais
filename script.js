@@ -163,3 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScrollAnimation();
     window.addEventListener('scroll', handleScrollAnimation);
 });
+// Permet de retourner les cartes au toucher sur mobile
+document.querySelectorAll('.flip-card').forEach(card => {
+    card.addEventListener('click', function() {
+        this.classList.toggle('is-flipped');
+    });
+});
