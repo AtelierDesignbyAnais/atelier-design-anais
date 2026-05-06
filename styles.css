@@ -442,10 +442,10 @@ h1, h2, h3, .cta-huge, .signature-text {
     margin: 0 auto;
 }
 
-/* Immersive Gallery - Editorial Masonry */
+/* Galerie Immersive - Version Automatique */
 .masonry-gallery {
     column-count: 3;
-    column-gap: 2rem;
+    column-gap: 1.5rem; /* Espace entre les colonnes */
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
@@ -453,35 +453,27 @@ h1, h2, h3, .cta-huge, .signature-text {
 
 .masonry-item {
     break-inside: avoid;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem; /* Espace sous chaque projet */
     border: var(--border-thin);
     border-radius: 0.5rem;
     background-color: var(--chocolate-light);
     transition: transform 0.5s ease;
     overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: auto !important; /* <--- SUPPRIME LES HAUTEURS FIXES */
 }
 
 .masonry-item img,
 .masonry-item video {
     width: 100%;
-    height: auto; 
+    height: auto !important; /* <--- ADAPTE LA HAUTEUR À L'IMAGE/VIDÉO */
     display: block;
-    object-fit: contain; 
+    object-fit: cover; /* <--- REMPLIT LE CADRE SANS BANDES NOIRES */
 }
 
-.masonry-item:hover {
-    transform: scale(0.98);
+/* On neutralise les anciens cadres pour qu'ils ne forcent plus rien */
+.frame-tall, .frame-wide, .frame-square, .frame-large, .frame-tall-2 {
+    height: auto !important;
 }
-
-.frame-tall { height: 600px; }
-.frame-wide { height: 300px; }
-.frame-square { height: 500px; }
-.frame-large { height: 700px; }
-.frame-tall-2 { height: 550px; }
 
 /* Signature Section */
 .signature {
