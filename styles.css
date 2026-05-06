@@ -468,9 +468,9 @@ h1, h2, h3, .cta-huge, .signature-text {
 .masonry-item img,
 .masonry-item video {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto; 
     display: block;
+    object-fit: contain; 
 }
 
 .masonry-item:hover {
